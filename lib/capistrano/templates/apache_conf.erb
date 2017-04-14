@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+ServerAdmin  <%= fetch(:server_admin) %>
+ServerName <%= fetch(:server_name) %>
+ServerAlias www.<%= fetch(:server_name) %>
+DocumentRoot <%= current_path %>/dist/
+<Directory  <%= current_path %>/dist/ >
+AllowOverride All
+</Directory>
+ErrorLog <%= current_path %>/logs/error.log
+CustomLog <%= current_path %>/logs/access.log combined
+</VirtualHost>

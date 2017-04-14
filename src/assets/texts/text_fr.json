@@ -1,0 +1,13 @@
+{
+  "TYPE": "FR",
+  "TO": "EN",
+  "WORK": "C'est en route !",
+  "INTRO":{
+    "id": "Quentin Tshaimanga / FR",
+    "url": {
+      "folio": "https://quentintshaimanga.fr",
+      "linkedlin": "https://fr.linkedin.com/in/quentin-tshaimanga-946a5a10b",
+      "twitter": "https://twitter.com/quentin_tshmga"
+    }
+  }
+}
