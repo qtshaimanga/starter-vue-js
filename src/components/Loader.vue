@@ -24,6 +24,8 @@ export default {
   },
   watch: {
     getProgressValueState ()  {
+      //TODO TimeLine
+
       var that = this;
       TweenMax.to(this, 1, {
         progress: this.getProgressValueState,
@@ -84,32 +86,28 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../styles/mixins.scss";
-@import "../styles/variables.scss";
+<style lang="stylus" scoped>
+@import "../styles/app.styl"
 
-.loader{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-}
+.loader
+  position absolute
+  width 100%
+  height 100%
+  margin 0px
+  padding 0px
+  display flex
+  justify-content center
 
-.container{
-  width: 10%;
-  height: 10%;
-  margin: auto;
-  #progress-bar{
-    width: 0px;
-    height: 3px;
-    background-color: black;
-  }
-  #progress-counter{
-    text-align: center;
-  }
-}
+.container
+  width 10%
+  height 10%
+  margin auto
+  #progress-bar
+    width 0px
+    height 3px
+    background-color black
+
+  #progress-counter
+    text-align center
 
 </style>

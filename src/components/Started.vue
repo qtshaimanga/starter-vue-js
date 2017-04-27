@@ -7,7 +7,7 @@
       </div>
       <transition name="fade" mode="out-in" appear>
         <div>
-          <p> {{ getListOfResourcesState.json_data.file.WORK }} </p>
+          <p> {{ getListOfResourcesState.json_data.file.WORK }} - <router-link to="/test">Go to test</router-link> </p>
           <img :src="getListOfResourcesState.vue_logo.file.src" />
         </div>
       </transition>
@@ -44,45 +44,40 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../styles/mixins.scss";
-@import "../styles/variables.scss";
+<style lang="stylus" scoped>
+@import "../styles/app.styl"
 
-.started{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  background-color: #F5F5F5;
-  display: flex;
-  justify-content: center;
-}
+.started
+  position absolute
+  width 100%
+  height 100%
+  margin: 0px
+  padding 0px
+  background-color $GRAY
+  display flex
+  justify-content center
 
-.container{
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin: auto;
-  p{
-    text-align: center;
-    font-size: 12px;
-    color: #333333;
-    font-family: 'san_francisco_displaysemibold';
-  }
-  div{
-    text-align: center;
-    a{
-      font-family: 'san_francisco_displayregular';
-      text-decoration: none;
-      color: #333333;
-      font-size: 12px;
-      text-transform: lowercase;;
-    }
-  }
-  img{
-    width: 20%;
-    height: auto;
-  }
-}
+.container
+  flex-wrap wrap
+  flex-direction column
+  margin auto
+  p
+    text-align center
+    color $DARK
+    font-family 'Farnham_Regular'
+    font-size 12px
+
+  div
+    text-align center
+    a
+      color $DARK
+      font-family 'Farnham_Medium'
+      font-size 12px
+      text-decoration none
+      text-transform lowercase
+
+  img
+    width 20%
+    height auto
 
 </style>

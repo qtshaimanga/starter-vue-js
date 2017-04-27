@@ -1,3 +1,5 @@
-var _config = module.exports = {
+const _config = {
 
-};
+}
+
+export default _config

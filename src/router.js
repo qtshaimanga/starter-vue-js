@@ -11,11 +11,15 @@ const routes = [
     path: '/',
     name : 'home',
     component: Start
+  },
+  {
+    path: '/test',
+    name : 'test',
+    component: Start
   }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes
 });

@@ -31,15 +31,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import "../styles/fonts/sanfranciscodisplay.scss";
-@import "../styles/transition.scss";
+<style lang="stylus">
+@import "../styles/app.styl"
 
-  .start{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
+  .start
+    width 100%
+    height 100%
+    margin 0px
+    padding 0px
 
 </style>
