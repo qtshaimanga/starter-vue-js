@@ -1,6 +1,7 @@
 # Starter Front : project.DMN.io
 
 > Starter with VueJS, VueX, Vue-ROUTER, Vue-RESOURCE, Capistrano...
+> quentin.tshaimanga@edf.fr
 
 ## Build Setup
 ### install dependencies localy
