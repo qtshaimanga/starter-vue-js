@@ -1,6 +1,6 @@
 # Starter Front : project.DMN.io
 
-> starter with VUEJS, VUEX, VUE-ROUTER, Capistrano...
+> Starter with VueJS, VueX, Vue-ROUTER, Vue-RESOURCE, Capistrano...
 
 ## Build Setup
 ### install dependencies localy
