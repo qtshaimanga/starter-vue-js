@@ -30,7 +30,7 @@ module.exports = merge(baseWebpackConfig, {
       inject: true
     }),
     new CopyWebpackPlugin(
-      [ { from: './static', to: './static' } ],
+      [ { from: './static', to: './' } ],
       { ignore: [ '.DS_Store', '.keep', '.gitkeep' ] }
     ),
     new FriendlyErrors(),
