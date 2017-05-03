@@ -7,7 +7,7 @@
       </div>
       <transition name="fade" mode="out-in" appear>
         <div>
-          <p> {{ getListOfResourcesState.json_data.file.WORK }} - <router-link to="/test">Go to test</router-link> </p>
+          <p> {{ getListOfResourcesState.json_data.file.WORK }} - <router-link to="/grid">Go to Grid</router-link> </p>
           <img :src="getListOfResourcesState.vue_logo.file.src" />
         </div>
       </transition>

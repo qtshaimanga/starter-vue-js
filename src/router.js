@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import App from './App'
 
 import Start from './containers/Start'
+import Grid from './containers/Grid'
 
 Vue.use(VueRouter)
 
@@ -13,9 +14,9 @@ const routes = [
     component: Start
   },
   {
-    path: '/test',
-    name : 'test',
-    component: Start
+    path: '/grid',
+    name : 'grid',
+    component: Grid
   }
 ];
 
