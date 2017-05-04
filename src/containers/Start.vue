@@ -3,6 +3,7 @@
     <transition name="fade" mode="out-in" appear>
       <div>
         <started></started>
+        <yolo></yolo>
       </div>
     </transition>
   </div>
@@ -10,12 +11,15 @@
 
 <script>
 import Started from '../components/Started';
+import Yolo from '../components/Yolo';
+
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'start',
   components: {
-    Started
+    Started,
+    Yolo
   },
   data () {
     return {}

@@ -62,10 +62,10 @@ export default {
   methods:{
     ...mapActions(['setLoaderDisplayerState','setListOfResourcesState','setProgressValueState']),
     initResourcesWithLoader (resources) {
-      var that = this;
-      var AudioContext = window.AudioContext || window.webkitAudioContext || false;
-      var audioContext = new AudioContext;
-      var loader = new AssetsLoader({
+      let that = this;
+      let AudioContext = window.AudioContext || window.webkitAudioContext || false;
+      let audioContext = new AudioContext;
+      let loader = new AssetsLoader({
         webAudioContext: audioContext,
       })
       .add(resources)

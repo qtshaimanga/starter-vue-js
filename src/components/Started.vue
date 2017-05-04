@@ -49,7 +49,7 @@ export default {
 
 .started
   position absolute
-  width 100%
+  width 50%
   height 100%
   margin: 0px
   padding 0px

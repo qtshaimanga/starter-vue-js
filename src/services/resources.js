@@ -9,4 +9,9 @@ export default [
     id: 'json_data',
     url: './static/texts/text_fr.json'
   },
+  {
+    type: 'json',
+    id: 'bernard',
+    url: 'https://labs.nearpod.com/bodymovin/demo/pancakes/data.json'
+  },
 ]
