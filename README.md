@@ -35,3 +35,8 @@ npm run dev
 ```
 cap production deploy:rollback
 ```
+
+## Prod
+```
+npm run build
+```
