@@ -12,10 +12,9 @@ import throttle from 'lodash.throttle';
 import _ from 'underscore';
 import MobileDetect from 'mobile-detect';
 
+import { mapActions, mapGetters } from 'vuex';
 
 import Loader from './components/Loader';
-
-import { mapActions, mapGetters } from 'vuex';
 
 
 export default {
@@ -31,7 +30,7 @@ export default {
   },
   created () {
     this.creditsLog();
-    this.resizer();
+    //this.resizer();
     this.mobileDetect();
   },
   mounted (){
@@ -47,7 +46,7 @@ export default {
      console.log('%c', 'background: #ffffff; font-size: 11px; color: #f0f0f0');
      /*eslint-enable */
     },
-     resizer () {
+    resizer () {
       var that = this;
       var throttled =  _.throttle(resized, 60, { 'trailing': false })
       var resize = window.addEventListener("resize", () => {

@@ -10,7 +10,7 @@
 <script>
 import TweenMax from 'gsap';
 import AssetsLoader from 'assets-loader';
-import Resources from '../services/resources';
+import Resources from '../config/services/resources';
 
 import { mapActions, mapGetters } from 'vuex';
 

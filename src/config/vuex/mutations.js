@@ -1,20 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import * as getters from './vuex/getters'
-import * as actions from './vuex/actions'
+import state from './state'
 
-Vue.use(Vuex)
-
-const state = {
-  resize: Boolean(),
-  mobileInfos: Object(),
-  loaderDisplayer: Boolean(true),
-  resources: Object(),
-  newResources: Object(),
-  progressValue: Number(),
-}
-
-const mutations = {
+export const mutations = {
   RESIZE (state, bool) {
     //if resized -> return true = watch this, do actions then set with false
     state.resize = bool;
@@ -44,12 +30,5 @@ const mutations = {
   PROGRESSVALUE (state, progress) {
     //for loader progress bar
     state.progressValue = progress;
-  },
+  }
 }
-
-export default new Vuex.Store({
-  state,
-  getters,
-  actions,
-  mutations
-})

@@ -4,6 +4,7 @@
       <div>
         <started></started>
         <yolo></yolo>
+        <login></login>
       </div>
     </transition>
   </div>
@@ -12,6 +13,7 @@
 <script>
 import Started from '../components/Started';
 import Yolo from '../components/Yolo';
+import Login from '../components/Login'
 
 import { mapGetters } from 'vuex';
 
@@ -19,19 +21,36 @@ export default {
   name: 'start',
   components: {
     Started,
-    Yolo
+    Yolo,
+    Login
   },
   data () {
     return {}
   },
-  watch: {},
   computed: {
     ...mapGetters(['getLoaderDisplayerState'])
   },
-  created () {},
-	mounted () {},
-  updated () {},
-  methods:{}
+	mounted () {
+    console.log("app started");
+
+  },
+  methods:{
+    login: function(){
+      console.log("login");
+      // this.$http.post('api/login', {"_username": "quentin", "_password": "foo"}).then( (response) => {
+      //     console.log(response);
+      //   }, (error) => {
+      //     console.log(error);
+      // });
+    },
+    fetchPosts: function() {
+      this.$http.get('api/protected_resource').then( (response) => {
+          console.log(response);
+        }, (error) => {
+          console.log(error);
+      });
+    }
+  }
 }
 </script>
 
