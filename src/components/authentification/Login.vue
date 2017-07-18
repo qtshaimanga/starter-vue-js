@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "../styles/app.styl"
+@import "~src/styles/app.styl"
 
   .login
     position absolute

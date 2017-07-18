@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "../styles/app.styl"
+@import "~src/styles/app.styl"
 
 .started
   position absolute

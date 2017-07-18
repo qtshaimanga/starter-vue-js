@@ -13,7 +13,7 @@
 <script>
 import Started from '../components/Started';
 import Yolo from '../components/Yolo';
-import Login from '../components/Login'
+import Login from '../components/authentification/Login'
 
 import { mapGetters } from 'vuex';
 
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "../styles/app.styl"
+@import "~src/styles/app.styl"
 
   .start
     width 100%

@@ -81,8 +81,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import "../styles/app.styl"
+<style lang="stylus" scoped>
+@import "~src/styles/app.styl"
 
   .yolo
     position absolute
