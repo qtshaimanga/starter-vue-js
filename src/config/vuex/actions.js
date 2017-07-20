@@ -1,7 +1,3 @@
-export const setUpdateSizeState = ({ commit, state }, bool) => {
-  commit('RESIZE', bool);
-}
-
 export const setMobileState = ({ commit, state }, infos) => {
   commit('MOBILE', infos);
 }
@@ -20,4 +16,12 @@ export const setResourcesChangeState = ({ commit, state }, resources) => {
 
 export const setProgressValueState = ({ commit, state }, progress) => {
   commit('PROGRESSVALUE', progress);
+}
+
+export const setAuthentificationState = ({ commit, state }, auth)=> {
+  commit('AUTH', auth )
+}
+
+export const setCurrentUserState = ({ commit, state }, currentUser)=> {
+  commit('CURRENT_USER', currentUser )
 }

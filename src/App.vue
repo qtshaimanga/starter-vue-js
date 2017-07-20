@@ -25,18 +25,23 @@ export default {
   data () {
     return {}
   },
+  watch : {},
   computed: {
     ...mapGetters(['getLoaderDisplayerState'])
   },
   created () {
+
     this.creditsLog();
-    //this.resizer();
     this.mobileDetect();
+    this.checkLogin()
+
   },
-  mounted (){
-  },
+  mounted (){},
   methods:{
-    ...mapActions(['setUpdateSizeState','setMobileState']),
+    ...mapActions({
+      setMobile: 'setMobileState',
+      setAuthentification: 'setAuthentificationState'
+    }),
     creditsLog() {
      /*eslint-disable */
      console.log('%c', 'background: #ffffff; font-size: 11px; color: #f0f0f0');
@@ -46,22 +51,22 @@ export default {
      console.log('%c', 'background: #ffffff; font-size: 11px; color: #f0f0f0');
      /*eslint-enable */
     },
-    resizer () {
-      var that = this;
-      var throttled =  _.throttle(resized, 60, { 'trailing': false })
-      var resize = window.addEventListener("resize", () => {
-        throttled();
-      });
-       var resized = () => {
-        that.setUpdateSizeState(true);
-      }
-    },
     mobileDetect () {
-       var userAgent = window.navigator.userAgent
-       var md = new MobileDetect(userAgent);
+       let userAgent = window.navigator.userAgent
+       let md = new MobileDetect(userAgent);
        if(md.mobile() != null){
-         this.setMobileState(md);
+         this.setMobile(md);
        }
+    },
+    checkLogin: function(){
+
+      let auth = JSON.parse(localStorage.getItem('auth'))
+      if(auth != null && auth.success === true){
+
+        this.setAuthentification(auth)
+
+      }
+
     }
   }
 }

@@ -2,9 +2,9 @@
   <div class="start" v-if="!getLoaderDisplayerState">
     <transition name="fade" mode="out-in" appear>
       <div>
+        <user></user>
         <started></started>
         <yolo></yolo>
-        <login></login>
       </div>
     </transition>
   </div>
@@ -13,43 +13,37 @@
 <script>
 import Started from '../components/Started';
 import Yolo from '../components/Yolo';
-import Login from '../components/authentification/Login'
+import User from '../components/User';
 
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'start',
   components: {
     Started,
     Yolo,
-    Login
+    User,
   },
   data () {
     return {}
   },
+  watch: {
+    getCurrentUserState: function(n){
+
+      console.log("and token refer to user : ", n);
+
+    }
+  },
   computed: {
-    ...mapGetters(['getLoaderDisplayerState'])
+    ...mapGetters(['getLoaderDisplayerState', 'getAuthentificationState', 'getCurrentUserState'])
   },
 	mounted () {
-    console.log("app started");
+
+    console.log("After Login App started with token : ", this.getAuthentificationState );
 
   },
   methods:{
-    login: function(){
-      console.log("login");
-      // this.$http.post('api/login', {"_username": "quentin", "_password": "foo"}).then( (response) => {
-      //     console.log(response);
-      //   }, (error) => {
-      //     console.log(error);
-      // });
-    },
-    fetchPosts: function() {
-      this.$http.get('api/protected_resource').then( (response) => {
-          console.log(response);
-        }, (error) => {
-          console.log(error);
-      });
-    }
+    ...mapActions({}),
   }
 }
 </script>

@@ -17,7 +17,7 @@
 
 <script>
 import { TweenMax } from 'gsap';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions  } from 'vuex';
 
 export default {
   name: 'started',
@@ -36,6 +36,7 @@ export default {
   },
   updated () {},
   methods:{
+    ...mapActions({}),
     animate () {
       TweenMax.staggerFrom(".intro", 1, { y:-20, opacity:0, ease: Power1.easeOut }, 0.2);
       TweenMax.staggerTo(".intro", 1, { y:0, opacity:1, ease: Power1.easeOut }, 0.2);

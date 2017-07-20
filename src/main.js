@@ -3,7 +3,7 @@ import App from './App';
 
 import router from './config/vuerouter/router';
 import store from './config/vuex/store';
-// import resources from './config/vueresource/config'
+import resources from './config/vueresource/config'
 
 new Vue({
   router,

@@ -1,7 +1,3 @@
-export const getUpdateSizeState = (state) => {
-  return state.resize;
-}
-
 export const getMobileState = (state) => {
   return state.mobileInfos;
 }
@@ -20,4 +16,12 @@ export const getResourcesChangeState = (state) => {
 
 export const getProgressValueState = (state) => {
   return state.progressValue;
+}
+
+export const getAuthentificationState = (state) => {
+  return state.authentification;
+}
+
+export const getCurrentUserState = (state) => {
+  return state.currentUser;
 }

@@ -10,7 +10,7 @@
 <script>
 import bodymovin from 'bodymovin';
 import { TweenMax } from 'gsap'
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions  } from 'vuex';
 
 export default {
   name: 'start',
@@ -31,6 +31,7 @@ export default {
   },
   updated () {},
   methods:{
+    ...mapActions({}),
     bodymovinAnimation (){
       const that = this;
       let count = 0;

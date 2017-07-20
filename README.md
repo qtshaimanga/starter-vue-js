@@ -12,7 +12,7 @@ npm install
 
 ## Dev
 ### serve with hot reload at localhost:8080
-```
+```shell
 npm run dev
 ```
 
@@ -32,11 +32,11 @@ npm run dev
 ````
 
 ### App crash > rollbask to the previous release
-```
+```shell
 cap production deploy:rollback
 ```
 
 ## Prod
-```
+```shell
 npm run build
 ```

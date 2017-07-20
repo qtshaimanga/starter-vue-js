@@ -1,10 +1,16 @@
 import Start from '../../containers/Start'
 import Grid from '../../containers/Grid'
+import Auth from '../../containers/Auth'
 
 export const routes = [
   {
     path: '/',
-    name : 'home',
+    name : 'authentification',
+    component: Auth
+  },
+  {
+    path: '/start',
+    name : 'start',
     component: Start
   },
   {

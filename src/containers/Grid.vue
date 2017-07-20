@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions  } from 'vuex';
 
 export default {
   name: 'grid',
@@ -79,7 +79,9 @@ export default {
   created () {},
 	mounted () {},
   updated () {},
-  methods:{}
+  methods:{
+    ...mapActions({}),
+  }
 }
 </script>
 

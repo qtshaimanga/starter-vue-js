@@ -1,16 +1,15 @@
 import state from './state'
 
 export const mutations = {
-  RESIZE (state, bool) {
-    //if resized -> return true = watch this, do actions then set with false
-    state.resize = bool;
-  },
   MOBILE (state, infos) {
-    //detect info for mobile
+    //detect mobile info
     state.mobileInfos = infos;
   },
   LOADERDISPLAYER (state, display) {
-    //if set without parameters return the oposite of state, if set with false or true take this or this other value
+    /*
+    if set displayer without parameters return the oposite of state,
+    if set with false or true take this or this other value
+    */
     if(display === undefined){
       state.loaderDisplayer = state.loaderDisplayer ? false : state.loaderDisplayer ? false : true;
     }else if(typeof display === "boolean"){
@@ -24,11 +23,20 @@ export const mutations = {
     state.resources[resource.id] = resource;
   },
   RESOURCESCHANGE (state, resources) {
-    //init resource if resources was changed
+    //init resource if resources was changed (EN-FR)
     state.newResources = resources;
   },
   PROGRESSVALUE (state, progress) {
     //for loader progress bar
     state.progressValue = progress;
+  },
+  AUTH (state, auth){
+    //set authentification information
+    state.authentification = auth;
+  },
+  CURRENT_USER (state, currentUser){
+    //set current user logged
+    state.currentUser = currentUser;
   }
+
 }
