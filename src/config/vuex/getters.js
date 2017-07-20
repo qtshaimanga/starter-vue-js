@@ -25,3 +25,7 @@ export const getAuthentificationState = (state) => {
 export const getCurrentUserState = (state) => {
   return state.currentUser;
 }
+
+export const getAuthDisplayerState = (state) => {
+  return state.authDisplayer;
+}

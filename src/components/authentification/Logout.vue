@@ -35,7 +35,7 @@ export default {
 @import "~src/styles/app.styl"
 
   .logout
-    width 50%
+    width 100%
     height 5%
     margin 0px 0px 0px 0px
     padding 20px 0px 20px 0px

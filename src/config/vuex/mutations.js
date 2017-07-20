@@ -37,6 +37,13 @@ export const mutations = {
   CURRENT_USER (state, currentUser){
     //set current user logged
     state.currentUser = currentUser;
+  },
+  AUTHDISPLAYER (state, auth) {
+    if(typeof auth[0] && typeof auth[1] && typeof auth[2] === "boolean"){
+      state.authDisplayer = auth
+    }else{
+      throw new Error("variable for AuthDisplayer state invalid");
+    }
   }
 
 }

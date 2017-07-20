@@ -25,3 +25,7 @@ export const setAuthentificationState = ({ commit, state }, auth)=> {
 export const setCurrentUserState = ({ commit, state }, currentUser)=> {
   commit('CURRENT_USER', currentUser )
 }
+
+export const setAuthDisplayerState = ({ commit, state }, auth) => {
+  commit('AUTHDISPLAYER', auth);
+}

@@ -9,7 +9,7 @@ Vue.http.options.emulateHTTP = true;
 
 Vue.http.interceptors.push(function(request, next) {
 
-    if(request.url != ('api/login' || 'api/register') ){
+    if( request.url != ('api/login' && 'api/register') ){
 
         let auth = JSON.parse(localStorage.getItem('auth'))
         Vue.http.headers.common['X-Access-Token'] = 'Bearer ' + auth.token;

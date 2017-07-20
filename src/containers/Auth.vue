@@ -2,9 +2,9 @@
   <div class="auth" v-if="!getLoaderDisplayerState">
     <transition name="fade" mode="out-in" appear>
       <div class="container">
-        <login v-if="true"></login>
-        <logout v-if="false"></logout>
-        <register v-if="false"></register>
+        <login v-show="this.getAuthDisplayerState[0]"></login>
+        <register v-show="this.getAuthDisplayerState[1]"></register>
+        <logout v-show="this.getAuthDisplayerState[2]"></logout>
       </div>
     </transition>
   </div>
@@ -29,7 +29,7 @@ export default {
   },
   watch : {},
   computed: {
-    ...mapGetters(['getLoaderDisplayerState'])
+    ...mapGetters(['getLoaderDisplayerState', 'getAuthDisplayerState'])
   },
 	mounted () {},
   methods:{

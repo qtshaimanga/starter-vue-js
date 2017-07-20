@@ -5,7 +5,8 @@
       <input placeholder="email" name="email" ref="email" type="text"/>
       <input placeholder="password" name="password" ref="password" type="password"/>
       <input placeholder="repeat password" name="_password" ref="_password" type="password"/>
-      <input type="submit" value="logout" @click="logout"/>
+      <input type="submit" value="register" @click="registerRequest"/>
+      <p @click="setAuthDisplayer([true, false, false])">login</p>
     </div>
   </div>
 </template>
@@ -22,17 +23,29 @@ export default {
   },
   watch: {},
   computed: {
-    ...mapGetters([])
+    ...mapGetters(['getAuthDisplayerState'])
   },
   created () {},
-	mounted () {
-
-  },
+	mounted () {},
   updated () {},
   methods:{
-    ...mapActions({}),
-    logout: function(){
+    ...mapActions({
+      setAuthDisplayer: 'setAuthDisplayerState'
+    }),
+    registerRequest: function(){
+      let email = this.$refs.email
+      let username = this.$refs.username
+      let password = this.$refs.password
 
+      this.$http.post('api/register', { "email": email, "username": username, "password": password } ).then(response => {
+
+        console.log(response);
+
+      }, response => {
+
+        console.log("error",response);
+
+      });
     }
   }
 }
@@ -42,8 +55,8 @@ export default {
 @import "~src/styles/app.styl"
 
   .register
-    width 50%
-    height 5%
+    width 100%
+    height 100%
     margin 0px 0px 0px 0px
     padding 20px 0px 20px 0px
     display flex
@@ -54,8 +67,16 @@ export default {
       width auto
       height auto
       margin auto
-      padding 0px
+      padding 20px 0px 20px 0px
+      display flex
       flex-wrap wrap
       flex-direction column
+
+      input
+        margin 0px 0px 15px 0px
+        padding 8px 4px 8px 4px
+
+      p
+      color white
 
 </style>

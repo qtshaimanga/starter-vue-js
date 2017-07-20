@@ -4,6 +4,7 @@
       <input placeholder="identifiant" name="_username" ref="username" type="text"/>
       <input placeholder="password" name="_password" ref="password" type="password"/>
       <input type="submit" value="login" @click="loginRequest"/>
+      <p @click="setAuthDisplayer([false, true, false])">creer un compte</p>
     </div>
   </div>
 </template>
@@ -20,14 +21,15 @@ export default {
   },
   watch: {},
   computed: {
-    ...mapGetters([])
+    ...mapGetters(['getAuthDisplayerState'])
   },
   created () {},
 	mounted () {},
   updated () {},
   methods:{
     ...mapActions({
-        setAuthentification: 'setAuthentificationState'
+        setAuthentification: 'setAuthentificationState',
+        setAuthDisplayer: 'setAuthDisplayerState'
     }),
     loginRequest: function(){
       let username = this.$refs.username.value
@@ -79,5 +81,8 @@ export default {
       input
         margin 0px 0px 15px 0px
         padding 8px 4px 8px 4px
+
+      p
+      color white
 
 </style>

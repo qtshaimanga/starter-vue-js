@@ -5,5 +5,6 @@ export const state = {
   newResources: Object(),
   progressValue: Number(),
   authentification: Object(),
-  currentUser: Object()
+  currentUser: Object(),
+  authDisplayer: [true, false, false]
 }
