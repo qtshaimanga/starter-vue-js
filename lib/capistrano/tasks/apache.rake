@@ -1,7 +1,7 @@
 namespace :apache  do
 
   desc "Création du fichier de conf apache2"
-  task :conf do
+  task :create_vhost_http do
     on roles(:web) do
       erb = File.read "lib/capistrano/templates/apache_conf.erb"
       set :server_name, ask('nom de domaine (without www) : ', 'developer.air-edf.io')
@@ -15,7 +15,7 @@ namespace :apache  do
   end
 
   desc "Update du fichier conf ssl pour apache2"
-  task :ssl do
+  task :create_vhost_https do
     on roles(:web) do
       erb = File.read "lib/capistrano/templates/apache_ssl.erb"
       set :server_name, ask('nom de domaine (without www) : ', 'developer.air-edf.io')
