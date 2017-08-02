@@ -39,7 +39,7 @@ npm run build
   - cap production letsencrypt:letsencrypt_renewal (renewal conf ssl_file)
 ```
 
-### App crash > rollbask to the previous release
+### If app crashed > rollbask to the previous release
 ```shell
 cap production deploy:rollback
 ```
