@@ -19,7 +19,12 @@ npm install
 npm run dev
 ```
 
-## Build and Production in project.DMN.io
+## Prod
+```shell
+npm run build
+```
+
+## Automation tools for production in project.DMN.io or DMN.io/project
 ```
   - [server] create /var/www/projectName/
   - set deploy.rb : repo and name
@@ -37,9 +42,4 @@ npm run dev
 ### App crash > rollbask to the previous release
 ```shell
 cap production deploy:rollback
-```
-
-## Prod
-```shell
-npm run build
 ```
