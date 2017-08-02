@@ -11,8 +11,6 @@ namespace :apache  do
       upload! StringIO.new(ERB.new(erb).result(binding)), config_file
       sudo :mv, config_file, "/etc/apache2/sites-available/#{fetch(:config_name)}"
       sudo :ln, '-fs', "/etc/apache2/sites-available/#{fetch(:config_name)}", "/etc/apache2/sites-enabled/#{fetch(:config_name)}"
-      sudo :service, :apache2, :restart
-      puts
     end
   end
 
@@ -26,8 +24,6 @@ namespace :apache  do
       config_file = "/tmp/apache_#{fetch(:config_name)}"
       upload! StringIO.new(ERB.new(erb).result(binding)), config_file
       sudo :mv, config_file, "/etc/apache2/sites-available/#{fetch(:config_name)}"
-      sudo :service, :apache2, :restart
-      puts
     end
   end
 

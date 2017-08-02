@@ -2,7 +2,7 @@
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
-ask(:server_ip, '151.80.58.17', echo: true)
+ask(:server_ip, '0.0.0.0', echo: true)
 ask(:server_user, nil, echo: true)
 ask(:server_port, nil, echo: true)
 server fetch(:server_ip), user: fetch(:server_user), roles: %w{app db web}, port: fetch(:server_port)

@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.8.2'
 
-set :application, 'starterVueJs'
+set :application, 'starter-vue-js'
 set :repo_url, 'git@github.com:airEDF/starter-vue-js.git'
 
-set :git_https_username, 'air-edf'
+set :git_https_username, 'qtshaimanga'
 set :ssh_options, {:forward_agent => true, :keys => ['~/.ssh/id_rsa.pub']}
 set :log_level, :debug
 
@@ -12,7 +12,8 @@ set :log_level, :debug
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+ask(:project_path, nil, echo: true)
+set :deploy_to, fetch(:project_path)
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -48,6 +49,6 @@ namespace :deploy do
       invoke "vue:vue_premissions"
   end
 
-  after :finished, "vue:restart_apache"
+  after :finished, "docker:apache_restart"
 
 end
